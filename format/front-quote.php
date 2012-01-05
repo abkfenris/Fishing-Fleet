@@ -1,0 +1,1 @@
+<div class="front-quote"><div class="right-space"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>">&bull;</a></div><div class="quote-format"></div><blockquote class="entry"><p><?php the_content(); ?></p></blockquote></div></div>
