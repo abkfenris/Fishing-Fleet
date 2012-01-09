@@ -425,8 +425,8 @@ div.right-space {
 .front-aside {
 	blockquote {
 		font: 14px/22px normal helvetica, sans-serif;
-		margin-top: 8/@em;
-		margin-bottom: 8/@em;
+	//	margin-top: 8/@em;
+	//	margin-bottom: 8/@em;
 		margin-left: 32/@em;
 		padding-left: 16/@em;
 		border-left: 4/@em solid @link;
@@ -435,6 +435,24 @@ div.right-space {
 }
 
 .front-image {
+	position: relative;
+	.image-overlay {
+		position: absolute;
+		width: 100%;
+		bottom: 0px;
+		left: 0px;
+		z-index: 2;
+		height: @gutter;
+		padding: 8/@em;
+		background: rgba(255,255,255,.5);
+
+		h2, time {
+			margin-right: 32/@em;
+		}
+	}
+	img {
+		z-index: 3;
+	}
 }
 
 .front-link {
@@ -452,7 +470,24 @@ div.right-space {
 }
 
 .front-standard {
-		margin-bottom: 8/@em;
+	position: relative;
+	.image-overlay {
+		position: absolute;
+		width: 100%;
+		bottom: 0px;
+		left: 0px;
+		z-index: 2;
+		height: @gutter;
+		padding: 8/@em;
+		background: rgba(255,255,255,.5);
+
+		h2, time {
+			margin-right: 32/@em;
+		}
+	}
+	img {
+		z-index: 3;
+	}
 }
 
 .embed-container { // From http://webdesignerwall.com/tutorials/css-elastic-videos/
