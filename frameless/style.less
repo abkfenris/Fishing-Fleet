@@ -115,6 +115,8 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -320,7 +322,7 @@ body {
 
 /* Added */
 
-/* Global Addapted from Autofocus */
+/* Global Adapted from Autofocus */
 
 /* Text elements */
 
@@ -368,7 +370,7 @@ header {
 
 nav {
 	font-family: 'Helvetica Neue', Helvetica, Arial, 'Nimbus Sans L', sans-serif;
-	padding-top: 8/@em;
+//	padding-top: 8/@em;
 	padding-bottom: 8/@em;
 }
 nav li {
@@ -376,11 +378,6 @@ nav li {
 	padding-left: 4/@em;
 	padding-right: 4/@em;
 } 
-div.menu {text-align: center}
-
-
-
-/* .wp-post-image {max-width: 100%} */
 
 // Add other size selectors
 .wp-post-image, .size-large, .size-full, .size-medium, .size-thumbnail {
@@ -398,6 +395,7 @@ div.menu {text-align: center}
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
+
 .image-pf-entry {
 	text-align: left;
 	display: block;
@@ -406,11 +404,11 @@ body {
 }
 
 
-article {
-	
+article {	
 	padding-bottom: 16/@em;
 	h2 {
 		font-family: 'Hoefler Text', Garamond, 'Times New Roman', Times, serif; 
+		font-variant: small-caps;
 	}
 	time {
 		font-family: 'Hoefler Text', Garamond, 'Times New Roman', Times, serif;
@@ -421,75 +419,7 @@ div.right-space {
 	float: left;
 } 
 
-
-.front-aside {
-	blockquote {
-		font: 14px/22px normal helvetica, sans-serif;
-	//	margin-top: 8/@em;
-	//	margin-bottom: 8/@em;
-		margin-left: 32/@em;
-		padding-left: 16/@em;
-		border-left: 4/@em solid @link;
-		background-color: @light-link;
-	}
-}
-
-.front-image {
-	position: relative;
-	.image-overlay {
-		position: absolute;
-		width: 100%;
-		bottom: 0px;
-		left: 0px;
-		z-index: 2;
-		height: @gutter;
-		padding: 8/@em;
-		background: rgba(255,255,255,.5);
-
-		h2, time {
-			margin-right: 32/@em;
-		}
-	}
-	img {
-		z-index: 3;
-	}
-}
-
-.front-link {
-}
-
-.front-quote {
-	blockquote {
-		font: 14px/22px normal helvetica, sans-serif;
-		margin-top: 8/@em;
-		margin-bottom: 8/@em;
-		margin-left: 32/@em;
-		padding-left: 16/@em;
-		border-left: 4/@em solid @link;
-	}
-}
-
-.front-standard {
-	position: relative;
-	.image-overlay {
-		position: absolute;
-		width: 100%;
-		bottom: 0px;
-		left: 0px;
-		z-index: 2;
-		height: @gutter;
-		padding: 8/@em;
-		background: rgba(255,255,255,.5);
-
-		h2, time {
-			margin-right: 32/@em;
-		}
-	}
-	img {
-		z-index: 3;
-	}
-}
-
+// Make embeds adapt to the width and then scale the height comparatively, works off of 56.25 being approximately the ratio of height to width.
 .embed-container { // From http://webdesignerwall.com/tutorials/css-elastic-videos/
 	position: relative;
 	padding-bottom: 56.25%;
@@ -505,14 +435,69 @@ div.right-space {
     }
 }
 
-	
-.front-video {
+/* --- Formatting the Front Page ---*/
+.front-aside {
+	blockquote {
+		font: 14px/22px normal helvetica, sans-serif;
+	//	margin-top: 8/@em;
+	//	margin-bottom: 8/@em;
 
-	iframe {
-		max-width: 100%;
+		margin-left: 32/@em;
+		padding-left: 16/@em;
+	//	border-left: 4/@em solid @link;
+		background-color: @light-link;
 	}
 }
 
+.front-image {
+	position: relative;
+
+	img {
+		z-index: 3;
+	}
+}
+
+.front-link {
+}
+
+.front-quote {
+/*	blockquote {
+		font: 14px/22px normal helvetica, sans-serif;
+	//	margin-top: 8/@em;
+	//	margin-bottom: 8/@em;
+		margin-left: 32/@em;
+		padding-left: 16/@em;
+		border-left: 4/@em solid @link;
+	} 
+*/
+}
+
+.front-standard {
+	position: relative;
+}
+
+// Overlay text over an image via a div around the text
+.image-overlay {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    z-index: 2;
+    height: @gutter;
+    padding: 8/@em;
+    background: white;
+    background: rgba(255,255,255,.5);
+
+    h2, time {
+    	margin-right: 32/@em;
+    }
+}
+	
+.front-video {
+}
+
+
+/* --- Formatting Posts not on the front page --- */
 
 .format-aside {}
 .format-image {
@@ -572,11 +557,7 @@ div.right-space {
 h1 {
 	font-size: 22px;
 }
-.page {
-	h2 {
-	}
-	
-}
+
 
 /*
 	Mobile layout 
@@ -857,5 +838,5 @@ nav {
 	display: table-cell;
 }
 .sf-menu li ul li a_before {
-	content: "\2014\00a0"
+	content: "B \2014\00a0"
 }

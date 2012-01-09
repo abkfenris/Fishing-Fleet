@@ -371,7 +371,7 @@ body {
   width: 34.5em;
 }
 /* Added */
-/* Global Addapted from Autofocus */
+/* Global Adapted from Autofocus */
 /* Text elements */
 p {
   margin-bottom: 18px;
@@ -466,7 +466,6 @@ header {
 }
 nav {
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Nimbus Sans L', sans-serif;
-  padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
 nav li {
@@ -474,10 +473,6 @@ nav li {
   padding-left: 0.25em;
   padding-right: 0.25em;
 }
-div.menu {
-  text-align: center;
-}
-/* .wp-post-image {max-width: 100%} */
 .wp-post-image,
 .size-large,
 .size-full,
@@ -505,65 +500,13 @@ article {
 }
 article h2 {
   font-family: 'Hoefler Text', Garamond, 'Times New Roman', Times, serif;
+  font-variant: small-caps;
 }
 article time {
   font-family: 'Hoefler Text', Garamond, 'Times New Roman', Times, serif;
 }
 div.right-space {
   float: left;
-}
-.front-aside blockquote {
-  font: 14px/22px normal helvetica, sans-serif;
-  margin-left: 2em;
-  padding-left: 1em;
-  border-left: 0.25em solid #e84c38;
-  background-color: #ffb29e;
-}
-.front-image {
-  position: relative;
-}
-.front-image .image-overlay {
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  left: 0px;
-  z-index: 2;
-  height: 24;
-  padding: 0.5em;
-  background: rgba(255, 255, 255, 0.5);
-}
-.front-image .image-overlay h2, .front-image .image-overlay time {
-  margin-right: 2em;
-}
-.front-image img {
-  z-index: 3;
-}
-.front-quote blockquote {
-  font: 14px/22px normal helvetica, sans-serif;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  margin-left: 2em;
-  padding-left: 1em;
-  border-left: 0.25em solid #e84c38;
-}
-.front-standard {
-  position: relative;
-}
-.front-standard .image-overlay {
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  left: 0px;
-  z-index: 2;
-  height: 24;
-  padding: 0.5em;
-  background: rgba(255, 255, 255, 0.5);
-}
-.front-standard .image-overlay h2, .front-standard .image-overlay time {
-  margin-right: 2em;
-}
-.front-standard img {
-  z-index: 3;
 }
 .embed-container {
   position: relative;
@@ -579,9 +522,49 @@ div.right-space {
   width: 100%;
   height: 100%;
 }
-.front-video iframe {
-  max-width: 100%;
+/* --- Formatting the Front Page ---*/
+.front-aside blockquote {
+  font: 14px/22px normal helvetica, sans-serif;
+  margin-left: 2em;
+  padding-left: 1em;
+  background-color: #ffb29e;
 }
+.front-image {
+  position: relative;
+}
+.front-image img {
+  z-index: 3;
+}
+.front-quote {
+  /*	blockquote {
+		font: 14px/22px normal helvetica, sans-serif;
+	//	margin-top: 8/@em;
+	//	margin-bottom: 8/@em;
+		margin-left: 32/@em;
+		padding-left: 16/@em;
+		border-left: 4/@em solid @link;
+	} 
+*/
+
+}
+.front-standard {
+  position: relative;
+}
+.image-overlay {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  z-index: 2;
+  height: 24;
+  padding: 0.5em;
+  background: white;
+  background: rgba(255, 255, 255, 0.5);
+}
+.image-overlay h2, .image-overlay time {
+  margin-right: 2em;
+}
+/* --- Formatting Posts not on the front page --- */
 .format-image h2 {
   float: left;
 }
@@ -906,5 +889,5 @@ nav {
   display: table-cell;
 }
 .sf-menu li ul li a_before {
-  content: "\2014\00a0";
+  content: "B \2014\00a0";
 }
