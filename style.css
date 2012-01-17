@@ -549,6 +549,8 @@ div.right-space {
 }
 .front-standard {
   position: relative;
+  display: table;
+  min-width: 1px;
 }
 .image-overlay {
   position: absolute;
