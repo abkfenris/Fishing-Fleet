@@ -104,4 +104,12 @@ function add_image_class($class){
 }
 add_filter('get_image_tag_class','add_image_class');
 
+/* Creating a shortcode to blank out anywhere the largeimage short codes from http://wp.tutsplus.com/tutorials/theme-development/wordpress-shortcodes-the-right-way/ */
+
+function blanklargeimage( $atts, $content = null ) {
+	return $content;
+}
+add_shortcode("largeimage","blanklargeimage");
+
+
 ?>
